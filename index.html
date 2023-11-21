@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="top-section"></div>
+    <div class="bottom-section">
+      <div class="bottom-left-section">
+        <ul class="expense-list"></ul>
+      </div>
+      <div class="bottom-right-section">
+        <div class="bottom-right-section-header">
+          <h3>Add Expense</h3>
+          <button class="close-button"><i class="fa fa-xmark"></i></button>
+        </div>
+        <form id="expenseForm">
+          <div class="form-container">
+            <div class="form-input">
+              <label for="expense-for">Title</label>
+              <input
+                type="text"
+                id="expense-for"
+                name="expense-for"
+                placeholder="Type something.."
+              />
+            </div>
+            <div class="form-input">
+              <label for="expense-type">Select Category</label>
+              <select id="expense-type">
+                <option value="0" selected>Select</option>
+                <option value="1">Shopping</option>
+                <option value="2">Food/Drinks</option>
+                <option value="3">Life & Entertainment</option>
+                <option value="4">Transportation</option>
+                <option value="5">Communication/PC</option>
+                <option value="6">Housing</option>
+                <option value="7">Vehicle</option>
+              </select>
+            </div>
+            <div class="form-input">
+              <label for="expense-amount">Amount</label>
+              <input
+                type="number"
+                id="expense-amount"
+                name="expense-amount"
+                placeholder="Amount"
+              />
+            </div>
+
+            <input type="submit" value="Add" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="toaster"></div>
+
+    <div class="add-expense-button">
+      <i class="fa fa-plus"></i>
+    </div>
+
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+    ></script>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
